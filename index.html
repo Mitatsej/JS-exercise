@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>funksionet anonime</title>
+    <style>
+        #box {
+            width: 250px;
+            margin: 150px;
+            padding: 20px;
+            border: 2px solid #000 ;
+            background-color: thistle;
+        }
+
+        #counter {
+            font-size: 24px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <p id="counter">0</p>
+    <div id="box">
+        JavaScripta
+- Destrukturimi i objekteve
+- Karakteristikat e kalkuluara (Computed properties)
+- Modulet - Krijimi, Exportimi, dhe Importimi
+- Document Object Model - DOM
+- Manipulimi i DOM-it
+- Events
+<button id="btn">kliko</button>
+    </div>
+
+
+    <!-- <h1 id="title"> Domi</h1>
+    <p>
+        loreeem ipsum popopo
+    </p>
+    <p>
+        lorem ipsumm popopopo
+    </p> 
+    <ul>
+        <li class="item" >List element 1</li>
+        <li>List element 2</li>
+        <li class="item" >List element 3</li>
+        <li  class="item">List element 4</li>
+        <li>List element 5</li>
+    </ul> -->
+    
+
+    
+    <script>
+        //bubling nese klikojm diqka mena dal si ni textbox qe qka kwm kliku
+        
+        const box = document.querySelector("#box");
+        const btn = document.querySelector("#btn");
+
+        box.addEventListener("click", function(addEventListener) {
+             alert("boksi u klikua");
+              },
+              false
+              );
+
+              btn.addEventListener("click", function(addEventListener) {
+             alert("butoni  u klikua");
+              },
+              false
+              );
+
+
+
+
+              
+        ////EVENTS
+     //eventet jane pershembull nese klikon diqka ne nje faqe met qit ne nje vend tjeter qe e cakton ti .
+     
+    //  const box = document.querySelector("#box");
+    // let counter = 0
+    // box.addEventListener("click", function() {  //nese klikojm nga nje here me u rrit numri
+    // counter++;
+    // document.querySelector("#counter").innerHTML = counter
+
+    // });
+    // box.addEventListener("dblclick", function() {  //nese klikojm nga dy here me u rrit numri per dy
+    // counter+=2;
+    // document.querySelector("#counter").innerHTML = counter
+
+    // });
+    // box.addEventListener("mouseover", function() { // nese klikojm mbi diqka me maus psh meju ndrru ngjyra
+    
+    //     box.style.background = "red"; //me ju ndrru ngjyra
+
+    // })
+
+
+
+        //Dom 
+//eshte dokumenti qe elidh javaskriptin me html tagat.ku html tagat i paraqet si objekte.
+
+//qasja e dom-it
+// me query selectorall  me i morr gjitha
+// me query selector veq imerr nja ka nja
+
+// const lis = document.querySelectorAll(".item")
+// console.log(lis);
+// Array.from(lis).forEach((li) => {
+//     li.style.color = "yellow"; //ju qasemi per ngjyr me li
+//     li.style.background = "black";
+//     li.style.transform = "rotate (3deg)";
+
+// })
+
+
+
+
+
+
+
+
+
+//get by classname
+
+// const lis = document.getElementsByClassName("item")
+// console.log(lis);
+// Array.from(lis).forEach((li) => {
+//     li.style.color = "yellow"; //ju qasemi per ngjyr me li
+//     li.style.background = "black";
+//     li.style.transform = "rotate (3deg)";
+
+// })
+
+
+
+
+
+
+
+
+
+
+
+//get by tagname
+
+// const pars = document.getElementsByTagName("p") //deklarojm variablem ja japem tag namen
+
+// console.log(pars); // e deklarojm variablen si funksion qe me u shfaq ne kossoll
+// Array.from (pars).forEach((p) => { // me kallxu cillin array ose tag me perdor se jan 3 paragrafe  e perdorem edhe foreach
+//     p.style.color = "yellow"; //ju qasemi per ngjyr me p 
+//     p.style.background = "black";
+//     p.style.transform = "rotate (3deg)";
+    
+
+//     p.addEventListener ("click" , (e) => { // nese klikojm permi paragraf ju ndrrohet ngjyra kjo msohet mee vone
+//         e.target.style.color = "red";
+//     })
+// }) 
+
+
+//get by id
+ 
+// document.getElementById("title").innerHTML = "WELCOME <span>THERE </<span>"; // id ne html emrin "titulli" .inner dmth meju qas permes domit edhe texti qe don me e ndrru
+// document.getElementById("title") .style.background = "yellow"; //gjdo tag elementi dmth mujna mmeju qas permes operatorit . stili psh ngjyra edhe ja ndrrojm
+
+// menyre me e shkurt
+
+// const title = document.getElementById("title")  //deklorojm variablen me emrin titulli ose qfardo
+
+// title.innerHTML = "WELCOME <span>THERE </<span>";  //ju qaasemi ne dyjat 
+//   title.style.background = "yellow";
+//title.setAttributte("class" , "title-one");//nese dojm meja shtu ni klas id title .
+
+
+
+
+
+
+
+    //  function add(x,y){
+    //      return x+y;
+
+    //  }
+    //  document.write(add(30,500));
+        
+//  let numbers = [304,44,45,46,47,48,49];
+
+//  let i = 0;
+//  let vargu_length = numbers.length - 1;
+
+//  for (i; i <=vargu_length; i++){
+//      document.write(numbers [i] + " ,,, ");
+//  }
+// let numbers = [304,44,45,46,47,48,49];
+
+//  let i = 0;
+//   let vargu_length = numbers.length - 1;
+
+//   while(i < vargu_length){
+//     document.write(numbers [i] + " ,,, ");
+//     i++;
+//   }
+
+// console.log(
+//     numbers.map((item) => item*2)// per me llogarit * 2 here sadush
+// );
+// console.log (
+//     // numbers.map((item) => item * 4 )
+//    // numbers.filter((item) => item % 2 == 0)//perdoret pershembull edhe > cillat numra jane mat mdhaj 
+//      //numrat qift kurse tek per me u gjet duhet !=
+//      numbers.reduce((sum,i) => sum + i )
+// );
+
+// function devide (x,y){
+//  if (y===0) throw 'nuk pjestohet';
+// return x/y;
+// }
+// try {
+//     document.write(devide (10,0));
+// } catch (n) {
+//     document.write(n);
+
+// }
+//exeption handlig
+// function pjesto (x,y){
+//     if ( x===0) throw "nuk llogaritet eeey";
+//     return x/y;
+// }
+// try{
+//     document.write(pjesto(4,0));
+// }catch (p){
+//     document.write(p);
+// }finally{
+//     console.log("finallyyyyy");
+// }
+
+/////zgjidhja e detyres...
+
+// const numbers = [3,4,5,55,6,7,8,76.87,09,98];
+
+// const qift = numbers.filter((i) => i %2 ===0 ).length;
+// const tek = numbers.filter((i) => i %2 != 0 ).length;
+// document.write([qift,tek]);
+//oop
+
+// const students = [
+//     {emri : "mitat", nota : 10.0},
+//     {emri : "egzon" , nota : 9.0},
+//     {emri : "endrit" , nota : 6},
+//     ];
+
+
+//     console.log(students.filter((student) => student.nota > 8));
+
+// const delet  = [
+//     {emri: "delebardh", mosha : 7 },
+//     {emri : "delezeze", mosha : 8 },
+//     {emri : "delelarme", mosha : 4 },
+
+// ];
+// console.log(delet.filter((dele) => dele.mosha > 5));
+
+
+//te llogaritet mestarja e numrave te studentave,
+//si fillim mbliddhem gjitha notat dhe shumzohen me dy
+// const students = [
+//     {emri : "mitat", nota : 10.0},
+//      {emri : "egzon" , nota : 9.0},
+//    {emri : "endrit" , nota : 6},
+//      ];
+    //  const s = students.reduce((sum,students) => sum+students.nota , 0);
+    //  document.write((s / students.length));
+ 
+ //ushtrim
+//   const s = students.reduce((sum,students) =>sum + students.nota,0);
+//   document.write ((s / students.length));
+
+//qysh me morr veq ni student pershembull
+
+// const students = [
+//     {emri : "mitat", nota : 10.0},
+//      {emri : "egzon" , nota : 9.0},
+//    {emri : "endrit" , nota : 6},
+//      ];
+
+    //  console.log((students[2]));
+
+    //gjetja e dy notave psh te para
+//     const students = [
+//     {emri : "mitat", nota : 10.0},
+//      {emri : "egzon" , nota : 9.0},
+//    {emri : "endrit" , nota : 6},
+//      ];
+
+//      console.log (
+         
+//          students.filter((student) => student.nota >=9 && student.nota <=10)
+         
+//      );
+ 
+
+ // nese dojm me gjet kush eka nje not te caktume.
+//  const students = [
+//      { name : "mitat ", grades : [1,2,3,4,5,6], avg_nota : 8.3},
+//      { name : "endrit ", grades : [1,2,3,4,5,,7,8], avg_nota : 8.6},
+//  ]
+
+//  console.log(
+//      students.filter((student) => student.grades.includes (6)));
+
+
+//VEKTORET DERI TEK LIGJ E 21 MBAROJN KETU!
+//!
+//!
+//!
+
+
+// DESTREKTURIMI DOMI EXPORT IMPORT STARTTTTTTTTTTT
+
+//destrekturimi 
+
+// const cat = {
+//     name : "kita",
+//     age : 2,
+// }
+// const {name,age} = cat
+
+// console.log(age + " " + name) ;// i inicialiyzon variablat i shtin qelsat nconst= name edhe i paraqet ne console
+
+//deklarimi ne fillim pastajjepja e vleres 
+
+// let x,y;
+// ({x,y} ={ x :100 , y:200});
+// console.log(x + " " + y );
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
